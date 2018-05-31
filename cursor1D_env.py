@@ -46,6 +46,21 @@ class cursor1D_env():
         
         return self.state
     
+    def reset_left(self):
+        self.state = 0
+        self.r = 0
+        self.a = 0 
+        self.d = False
+        
+        return self.state
+    
+    def reset_right(self):
+        self.state = 1
+        self.r = 0
+        self.a = 0 
+        self.d = False
+        
+        return self.state
 
     def render(self, size = [800,400], display_sr = False, display_hm = False):
         
@@ -104,7 +119,7 @@ class cursor1D_env():
             self.screen.blit(text, [20, 20])
             
         #Display state and reward info in the upper righ corner
-        if display_sr:
+        if display_hm:
             text = font.render("{}/{}".format(self.hit, self.miss), True, BLACK)
             self.screen.blit(text, [self.size[0]-100, 20])
         
