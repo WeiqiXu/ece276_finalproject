@@ -55,7 +55,10 @@ class gridWorld_env(FrozenLakeEnv):
         
         #If we reached the goal give a reward of 1
         if s == 15:
-            r_real = 1
+            if sample < self.truePositiveRate:
+                r_real = 1
+            else:
+                r_real = 0
 
         #If going to the goal, the true reward should be 1
         elif (a == 1 or a == 2) and last_s != s:
