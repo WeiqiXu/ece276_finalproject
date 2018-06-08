@@ -1,3 +1,3 @@
 This repo contains the code for our final project in ECE 276C from UCSD. 
 
-The noisy_reward.ipynb will be the main file that does the simulation and produces the results. The rest of the files are environment files.
+The 2 ipython notebooks are used to test our hueristic reward on the 2 different environments.

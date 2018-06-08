@@ -138,14 +138,14 @@ class cursor1D_env():
     def getHeuristicReward(self, s,  a, last_s):
         
         #Between 0.625 and 0.375
-        if s <= 0.625 or s >= 0.375:
-            r_huer = 1
+        if s <= 0.625 and s >= 0.375:
+            r_huer = 0.25
         
         
         else:
             #Moving towards the goal
             if (s < 0.375 and a == 2) or (s > 0.625 and a == 1):
-                r_huer = 1
+                r_huer = 0.25
             else:
                 r_huer = 0
                 
